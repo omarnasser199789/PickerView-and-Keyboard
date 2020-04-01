@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView_and_Keyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-ie-n0H">
+                                <rect key="frame" x="20" y="633" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0I3-ok-UqC"/>
+                                    <constraint firstAttribute="width" constant="374" id="OBO-gT-MSf"/>
+                                </constraints>
+                                <state key="normal" title="get best wight "/>
+                                <connections>
+                                    <action selector="buGetbestwight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jx4-bH-aXt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your hights" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEH-zV-VXY">
+                                <rect key="frame" x="20" y="177" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Amo-IZ-QeJ"/>
+                                    <constraint firstAttribute="height" constant="34" id="nAB-Bb-VbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selct your gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G58-kH-Ycn">
+                                <rect key="frame" x="20" y="288" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="waY-sq-vTG"/>
+                                    <constraint firstAttribute="height" constant="21" id="xQW-gE-LEE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-0P-Mxo">
+                                <rect key="frame" x="0.0" y="367" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="REq-ct-6GM"/>
+                                    <constraint firstAttribute="height" constant="216" id="pZ6-nD-ecS"/>
+                                </constraints>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-y9-1wG">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="1KH-u1-XTF"/>
+                                    <constraint firstAttribute="height" constant="34" id="2Vx-BB-t7A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="your best wghit is " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G4-NG-Prr">
+                                <rect key="frame" x="20" y="703" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Cbu-95-WPU"/>
+                                    <constraint firstAttribute="width" constant="374" id="XnX-ME-SNP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0G4-NG-Prr" firstAttribute="top" secondItem="7oD-ie-n0H" secondAttribute="bottom" constant="46" id="1Ye-bk-dLf"/>
+                            <constraint firstItem="7oD-ie-n0H" firstAttribute="top" secondItem="ebD-0P-Mxo" secondAttribute="bottom" constant="50" id="9gL-qm-tM3"/>
+                            <constraint firstItem="G58-kH-Ycn" firstAttribute="top" secondItem="KEH-zV-VXY" secondAttribute="bottom" constant="77" id="B5g-2Y-2Sc"/>
+                            <constraint firstItem="ebD-0P-Mxo" firstAttribute="top" secondItem="G58-kH-Ycn" secondAttribute="bottom" constant="58" id="Bpz-4e-wef"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bD8-y9-1wG" secondAttribute="trailing" constant="20" id="CnP-V0-Tbo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oD-ie-n0H" secondAttribute="trailing" constant="20" id="GyL-k1-aeN"/>
+                            <constraint firstItem="KEH-zV-VXY" firstAttribute="top" secondItem="bD8-y9-1wG" secondAttribute="bottom" constant="43" id="IZ8-LL-Ud4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KEH-zV-VXY" secondAttribute="trailing" constant="20" id="Itf-Ob-yiR"/>
+                            <constraint firstItem="ebD-0P-Mxo" firstAttribute="top" secondItem="G58-kH-Ycn" secondAttribute="bottom" constant="58" id="M0a-w1-7hR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0G4-NG-Prr" secondAttribute="trailing" constant="20" id="N44-Rd-hdE"/>
+                            <constraint firstItem="ebD-0P-Mxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W3K-Xm-Vg6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0G4-NG-Prr" secondAttribute="bottom" constant="118" id="WWw-q9-BsM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G58-kH-Ycn" secondAttribute="trailing" constant="20" id="XT8-0D-ifq"/>
+                            <constraint firstItem="G58-kH-Ycn" firstAttribute="top" secondItem="KEH-zV-VXY" secondAttribute="bottom" constant="77" id="b9g-5g-ntt"/>
+                            <constraint firstItem="KEH-zV-VXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fY9-sv-5GD"/>
+                            <constraint firstItem="G58-kH-Ycn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="htN-SB-hLu"/>
+                            <constraint firstItem="0G4-NG-Prr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ifw-PJ-GWA"/>
+                            <constraint firstItem="7oD-ie-n0H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pqW-gN-Qdy"/>
+                            <constraint firstItem="bD8-y9-1wG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="qdg-bD-dfu"/>
+                            <constraint firstItem="bD8-y9-1wG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tvB-6d-8Cz"/>
+                            <constraint firstItem="0G4-NG-Prr" firstAttribute="top" secondItem="7oD-ie-n0H" secondAttribute="bottom" constant="46" id="uzC-Th-Cbm"/>
+                            <constraint firstItem="ebD-0P-Mxo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w5q-rw-c6X"/>
+                            <constraint firstItem="7oD-ie-n0H" firstAttribute="top" secondItem="ebD-0P-Mxo" secondAttribute="bottom" constant="50" id="zxe-us-QrA"/>
+                            <constraint firstItem="KEH-zV-VXY" firstAttribute="top" secondItem="bD8-y9-1wG" secondAttribute="bottom" constant="43" id="zyD-LW-Qay"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="laDisplaybestwghit" destination="0G4-NG-Prr" id="xmM-dN-moU"/>
+                        <outlet property="laselectgender" destination="G58-kH-Ycn" id="dl3-9e-lgQ"/>
+                        <outlet property="pickerGender" destination="ebD-0P-Mxo" id="tVQ-la-Kz8"/>
+                        <outlet property="textAge" destination="bD8-y9-1wG" id="H2H-wm-1Zr"/>
+                        <outlet property="texthight" destination="KEH-zV-VXY" id="tqk-5s-t3u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </scene>
     </scenes>
 </document>
